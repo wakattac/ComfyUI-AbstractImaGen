@@ -29,16 +29,16 @@ TBD
 5.  If you have a Python environment set up for ComfyUI, you can install the dependencies listed in `requirements.txt` (though most are likely already installed with ComfyUI).
     Linux:
     ```bash
-    cd replace_this_with_your_base_comfyui_directory
+    cd ../..
     source venv/bin/activate
-    cd path/to/comfyui/custom_nodes/comfyui-abstract-image-generator
+    cd path/to/comfyui/custom_nodes/ComfyUI-AbstractImaGen
     pip install -r requirements.txt
     ```
     Windows:
     ```powershell
-    cd replace_this_with_your_base_comfyui_directory
-    venv/Scripts/activate
-    cd path/to/comfyui/custom_nodes/comfyui-abstract-image-generator
+    cd ..\..
+    venv\Scripts\activate
+    cd path\to\comfyui\custom_nodes\ComfyUI-AbstractImaGen
     pip install -r requirements.txt
     ```
 7.  Restart ComfyUI.
