@@ -1,4 +1,4 @@
-# ComfyUI Abstract Image Generator (Seeded)
+# ComfyUI Abstract Image Generator
 
 A custom node for ComfyUI that generates abstract images with comprehensive seed-based control over layers, shapes, patterns, noise, colors, and post-processing effects.
 
@@ -22,15 +22,21 @@ TBD
 ### Manual Installation
 1.  Navigate to your ComfyUI installation directory.
 2.  Go into the `custom_nodes` folder.
-3.  Create a new folder for this node, for example, `comfyui-abstract-image-generator`.
-4.  Inside this new folder, place the `abstract_image.py` file (the main node code), `requirements.txt` and the `__init__.py` files.
-5.  If you have a Python environment set up for ComfyUI, you can install the dependencies listed in `requirements.txt` (though most are likely already installed with ComfyUI).
+3.  Open a terminal and run
     ```bash
+    git clone https://github.com/wakattac/ComfyUI-AbstractImaGen
+    ```
+5.  If you have a Python environment set up for ComfyUI, you can install the dependencies listed in `requirements.txt` (though most are likely already installed with ComfyUI).
+    Linux:
+    ```bash
+    cd replace_this_with_your_base_comfyui_directory
     source venv/bin/activate
     cd path/to/comfyui/custom_nodes/comfyui-abstract-image-generator
     pip install -r requirements.txt
     ```
+    Windows:
     ```powershell
+    cd replace_this_with_your_base_comfyui_directory
     venv/Scripts/activate
     cd path/to/comfyui/custom_nodes/comfyui-abstract-image-generator
     pip install -r requirements.txt
