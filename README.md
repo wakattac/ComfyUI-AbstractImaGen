@@ -68,7 +68,56 @@ Adjust the various input parameters to control the generated image:
 * **\*\_amount/sigma/contrast/brightness\_min/max:** Ranges for the parameters of the post-processing effects when they are applied.
 * **\*\_salt:** Individual salts for each component. Modifying a component's salt will change the randomness *only* within that component's operations, allowing for fine-tuning variations without altering other parts of the image structure controlled by different components or the main seed.
 
-Experiment with the parameters and salts to discover a wide range of abstract visuals!
+Experiment with the parameters and salts to discover a wide range of abstract visuals.
+
+### Parameter table
+
+| **Parameter**             | **Description**                                                            |
+| ------------------------- | -------------------------------------------------------------------------- |
+| `width`                   | Width of the generated image.                                              |
+| `height`                  | Height of the generated image.                                             |
+| `seed`                    | Main seed controlling overall randomness.                                  |
+| `color_mode`              | Overall color scheme for the image.                                        |
+| `toned_rgb_r`             | Red component for Toned RGB color mode.                                    |
+| `toned_rgb_g`             | Green component for Toned RGB color mode.                                  |
+| `toned_rgb_b`             | Blue component for Toned RGB color mode.                                   |
+| `layer_shapes_prob`       | Probability of adding a layer of shapes.                                   |
+| `layer_pattern_prob`      | Probability of adding a tiled pattern layer.                               |
+| `layer_noise_prob`        | Probability of adding a noise pattern layer.                               |
+| `num_layers_min`          | Minimum number of feature layers.                                          |
+| `num_layers_max`          | Maximum number of feature layers.                                          |
+| `shapes_per_layer_min`    | Minimum number of shapes to draw per shapes layer.                         |
+| `shapes_per_layer_max`    | Maximum number of shapes to draw per shapes layer.                         |
+| `line_width_min`          | Minimum width for lines and zig-zags in shapes layers.                     |
+| `line_width_max`          | Maximum width for lines and zig-zags in shapes layers.                     |
+| `filled_shape_color_mode` | Color selection mode for filled shapes.                                    |
+| `line_zigzag_color_mode`  | Color selection mode for lines and zig-zags.                               |
+| `bg_type_gradient_prob`   | Probability of using a gradient background instead of a solid color.       |
+| `feather_layer_prob`      | Probability of feathering (blurring the alpha of) each feature layer.      |
+| `add_grain_prob`          | Probability of adding photographic grain (noise) to the final image.       |
+| `adjust_contrast_prob`    | Probability of adjusting the contrast of the final image.                  |
+| `adjust_brightness_prob`  | Probability of adjusting the brightness of the final image.                |
+| `grayscale_final_prob`    | Probability of converting the final image to grayscale (if not already).   |
+| `final_blur_prob`         | Probability of applying a final overall blur to the image.                 |
+| `grain_amount_min`        | Minimum amount of grain to add (if applied).                               |
+| `grain_amount_max`        | Maximum amount of grain to add (if applied).                               |
+| `contrast_min`            | Minimum contrast adjustment factor (if applied).                           |
+| `contrast_max`            | Maximum contrast adjustment factor (if applied).                           |
+| `brightness_min`          | Minimum brightness adjustment amount (if applied).                         |
+| `brightness_max`          | Maximum brightness adjustment amount (if applied).                         |
+| `final_blur_sigma_min`    | Minimum sigma for the final blur (if applied).                             |
+| `final_blur_sigma_max`    | Maximum sigma for the final blur (if applied).                             |
+| `feather_sigma_min`       | Minimum sigma for feathering layers (if applied).                          |
+| `feather_sigma_max`       | Maximum sigma for feathering layers (if applied).                          |
+| `bg_salt`                 | Salt for background generation randomness.                                 |
+| `shapes_salt`             | Salt for shapes generation randomness.                                     |
+| `pattern_salt`            | Salt for pattern generation randomness.                                    |
+| `noise_salt`              | Salt for noise layer generation randomness.                                |
+| `post_processing_salt`    | Salt for post-processing randomness (e.g., applying features, parameters). |
+| `blending_salt`           | Salt for blending mode selection randomness.                               |
+| `color_generation_salt`   | Salt for random color generation randomness.                               |
+| `shape_type_bias_salt`    | Salt for random shape type selection randomness (filled vs line/zigzag).   |
+
 
 ## Contributing
 
