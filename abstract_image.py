@@ -660,8 +660,8 @@ class AbstractImageGenerator:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "width": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 64, "display": "number", "tooltip": "Width of the generated image."}),
-                "height": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 64, "display": "number", "tooltip": "Height of the generated image."}),
+                "width": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "tooltip": "Width of the generated image."}),
+                "height": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "tooltip": "Height of the generated image."}),
                 "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "tooltip": "Main seed controlling overall randomness."}),
                 "color_mode": (["rgb", "grayscale", "toned-random", "toned-green-yellow", "toned-red-magenta", "toned-blue-cyan", "toned-rgb"], {"default": "rgb", "tooltip": "Overall color scheme for the image."}),
 
