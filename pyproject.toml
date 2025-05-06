@@ -1,6 +1,6 @@
 [project]
 name = "ComfyUI-AbstractImaGen"
-description = "ComfyUI node for [a/Abstract Image Generation](https://github.com/wakattac/ComfyUI-AbstractImaGen/). This node generates randomized images with shapes and noise, fit for being used as pre-shaped latents, together with a VAE Encode node and 0.8-0.9 Denoise ratio in the KSampler."
+description = "ComfyUI node for [a/Abstract Image Generation](https://github.com/wakattac/ComfyUI-AbstractImaGen/). This node is designed to create unique abstract base images on the fly within your ComfyUI workflows, which can then be used as input for VAE encoding, image-to-image generation, or other creative processes."
 version = "1.0.0"
 license = { file = "LICENSE" }
 dependencies = ["torch", "pillow", "numpy", "scipy"]
