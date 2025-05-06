@@ -14,6 +14,13 @@ This node is designed to create unique abstract base images on the fly within yo
 * **Post-Processing Effects:** Probabilistically apply and control parameters for gradient background, layer feathering, grain (noise), contrast, brightness, grayscale conversion, and final blur.
 * **ComfyUI Integration:** Seamlessly integrates into your ComfyUI workflow, outputting a standard `IMAGE` tensor.
 
+## Usage Examples
+Generated with denoise of 0.80
+
+<img src="examples/example1.png" alt="Example 1" width="800"> 
+<img src="examples/example2.png" alt="Example 2" width="800">
+
+
 ## Installation
 
 ### ComfyUI-manager
