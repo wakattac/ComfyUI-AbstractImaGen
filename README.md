@@ -23,10 +23,15 @@ Generated with denoise of 0.80
 
 ## Installation
 
-### ComfyUI-manager
-TBD
+### ComfyUI-Manager (Recommended)
 
-### Manual Installation
+1. Open ComfyUI manager
+2. Click on "Custom Nodes Manager"
+3. Search for AbstractImaGen
+4. Install it
+5. Restart and refresh the browser window
+
+### Manual Installation (Not Recommended)
 1.  Navigate to your ComfyUI installation directory.
 2.  Go into the `custom_nodes` folder.
 3.  Open a terminal and run
