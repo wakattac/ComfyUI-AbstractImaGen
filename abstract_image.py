@@ -3,7 +3,7 @@ import random
 import os
 import numpy as np
 from scipy.ndimage import gaussian_filter
-import torch # ComfyUI uses PyTorch
+import torch 
 
 # --- Configuration Class (Adapted for Node Inputs) ---
 class AbstractImageConfig:
@@ -494,7 +494,7 @@ def draw_gradient_np(width, height, color_mode, config, salt=0):
     return gradient.astype(np.uint8)
 
 
-# --- Post Processing Functions (Updated) ---
+# --- Post Processing Functions ---
 def add_grain_np(arr, config, salt=0):
     """Adds Gaussian noise (grain) using seed-based RNG for parameters."""
     pp_rng_params = config.get_rng('post_processing', salt + 1)
@@ -564,7 +564,7 @@ def apply_feather_layer_np(arr, config, salt=0):
     return arr
 
 
-# --- Main Generation Function (Adapted for Node Structure) ---
+# --- Main Generation Function ---
 def generate_abstract_image_seeded(width, height, config, color_mode,
                                    filled_shape_color_mode, line_zigzag_color_mode):
     """
@@ -577,7 +577,6 @@ def generate_abstract_image_seeded(width, height, config, color_mode,
         base_np = draw_gradient_np(width, height, color_mode, config, salt=bg_salt)
     else:
         bg_rng = config.get_rng('background', salt=bg_salt + 1)
-        # Pass color_mode as positional argument
         solid_color = get_color_from_mode(bg_rng, 'rgb', alpha_range=(255, 255), toned_rgb_color=config.toned_rgb_color)
         base_np = np.full((height, width, 4), solid_color, dtype=np.uint8)
 
@@ -598,10 +597,8 @@ def generate_abstract_image_seeded(width, height, config, color_mode,
                 line_zigzag_color_mode=line_zigzag_color_mode
                 )
         elif layer_type == 'pattern':
-            # Pass color_mode as positional argument
             layer_pil = draw_repeating_pattern_layer(width, height, color_mode, config, salt=layer_salt)
         elif layer_type == 'noise':
-            # Pass color_mode as positional argument
             layer_pil = draw_perlin_noise_layer_fast(width, height, color_mode, config, salt=layer_salt)
 
         if layer_pil is not None:
