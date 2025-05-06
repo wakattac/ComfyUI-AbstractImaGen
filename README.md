@@ -17,8 +17,8 @@ This node is designed to create unique abstract base images on the fly within yo
 ## Usage Examples
 Generated with denoise of 0.80
 
-<img src="examples/example1.png" alt="Example 1" width="800"> 
-<img src="examples/example2.png" alt="Example 2" width="800">
+<img src="examples/example1_1.png" alt="Example 1" width="800"> 
+<img src="examples/example1_2.png" alt="Example 2" width="800">
 
 
 ## Installation
