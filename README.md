@@ -39,6 +39,7 @@ Generated with denoise of 0.80
     git clone https://github.com/wakattac/ComfyUI-AbstractImaGen
     ```
 5.  If you have a Python environment set up for ComfyUI, you can install the dependencies listed in `requirements.txt` (though most are likely already installed with ComfyUI).
+   
     Linux:
     ```bash
     cd ../..
