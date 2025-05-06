@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-AbstractImaGen"
+description = "ComfyUI node for [a/Abstract Image Generation](https://github.com/wakattac/ComfyUI-AbstractImaGen/). This node generates randomized images with shapes and noise, fit for being used as pre-shaped latents, together with a VAE Encode node and 0.8-0.9 Denoise ratio in the KSampler."
+version = "1.0.0"
+license = { file = "LICENSE" }
+dependencies = ["torch", "pillow", "numpy", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/wakattac/ComfyUI-AbstractImaGen"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "wakattac"
+DisplayName = "ComfyUI-AbstractImaGen"
+Icon = ""
