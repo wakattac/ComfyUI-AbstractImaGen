@@ -61,7 +61,7 @@ You should now find the node under the "AbstractImage" category in the add node 
 
 ## Usage
 
-Add the "Abstract Image Generator (Seeded)" node to your workflow. Connect its `IMAGE` output to any node that accepts an image input (e.g., VAE Encode, Save Image).
+Add the "Abstract Image Generator (Seeded)" node to your workflow. Connect its `IMAGE` output to any node that accepts an image input (e.g., VAE Encode, Save Image). Create the latent with VAE Encode, then set your initial KSampler to 0.8-0.9 denoise.
 
 Adjust the various input parameters to control the generated image:
 
