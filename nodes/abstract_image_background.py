@@ -15,22 +15,22 @@ class AbstractImageBackground:
         color_modes = ["random"] + [c.lower() for c in ["Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "Black", "White"]]
         return {
             "required": {
-                "width": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "description": "Width of the generated image."}),
-                "height": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "description": "Height of the generated image."}),
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "description": "Seed for background randomness."}),
-                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "description": "If true, randomize background type, colors, and gradient direction using the seed. Hex inputs override random colors if valid."}),
-                "background_type": (["solid", "gradient"], {"default": "solid", "description": "Choose between a solid color or gradient background."}),
+                "width": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "tooltip": "Width of the generated image."}),
+                "height": ("INT", {"default": 512, "min": 64, "max": 2048, "step": 8, "display": "number", "tooltip": "Height of the generated image."}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "tooltip": "Seed for background randomness."}),
+                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "tooltip": "If true, randomize background type, colors, and gradient direction using the seed. Hex inputs override random colors if valid."}),
+                "background_type": (["solid", "gradient"], {"default": "solid", "tooltip": "Choose between a solid color or gradient background."}),
 
                 # Solid Color Options
-                "solid_color_mode": (color_modes, {"default": "random", "description": "Color selection mode for solid background."}),
-                "solid_color_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "description": "Hex code for solid color background (overrides Solid Color Mode if valid). Example: #FF0000 for red."}),
+                "solid_color_mode": (color_modes, {"default": "random", "tooltip": "Color selection mode for solid background."}),
+                "solid_color_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "tooltip": "Hex code for solid color background (overrides Solid Color Mode if valid). Example: #FF0000 for red."}),
 
                 # Gradient Color Options
-                "gradient_color_mode_start": (color_modes, {"default": "random", "description": "Color selection mode for the gradient start color."}), # New input
-                "gradient_color_mode_end": (color_modes, {"default": "random", "description": "Color selection mode for the gradient end color."}),   # New input
-                "gradient_start_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "description": "Hex code for gradient start color (overrides Start Color Mode if valid). Example: #00FF00 for green."}),
-                "gradient_end_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "description": "Hex code for gradient end color (overrides End Color Mode if valid). Example: #0000FF for blue."}),
-                "gradient_direction": (["vertical", "horizontal", "radial", "diagonal"], {"default": "vertical", "description": "Direction of the gradient."}),
+                "gradient_color_mode_start": (color_modes, {"default": "random", "tooltip": "Color selection mode for the gradient start color."}), # New input
+                "gradient_color_mode_end": (color_modes, {"default": "random", "tooltip": "Color selection mode for the gradient end color."}),   # New input
+                "gradient_start_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "tooltip": "Hex code for gradient start color (overrides Start Color Mode if valid). Example: #00FF00 for green."}),
+                "gradient_end_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "tooltip": "Hex code for gradient end color (overrides End Color Mode if valid). Example: #0000FF for blue."}),
+                "gradient_direction": (["vertical", "horizontal", "radial", "diagonal"], {"default": "vertical", "tooltip": "Direction of the gradient."}),
             },
         }
 
