@@ -716,7 +716,7 @@ class AbstractImageGenerator:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "generate"
-    CATEGORY = "AbstractImage"
+    CATEGORY = "AbstractImage/Old-V1"
 
     def generate(self, width, height, seed, color_mode,
                  toned_rgb_r, toned_rgb_g, toned_rgb_b,
