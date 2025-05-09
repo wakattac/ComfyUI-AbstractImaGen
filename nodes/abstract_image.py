@@ -800,5 +800,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "AbstractImageGenerator": "Abstract Image Generator (Seeded)"
+    "AbstractImageGenerator": "Abstract Image Generator V1 (Random-Gacha-Mode)"
 }
