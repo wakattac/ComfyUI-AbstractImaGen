@@ -36,18 +36,18 @@ class AbstractImagePattern:
         return {
             "required": {
                 "image": ("IMAGE",), # Input image
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "description": "Seed for pattern randomness."}),
-                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "description": "If true, randomize pattern size, colors, position, and blend mode using the seed."}),
-                "num_layers": ("INT", {"default": 1, "min": 1, "max": 10, "step": 1, "display": "number", "description": "Number of pattern layers to add."}),
-                "tile_size": ("INT", {"default": 64, "min": 16, "max": 512, "step": 16, "display": "number", "description": "Size of the repeating pattern tile."}),
-                "pattern_color_mode": (["random", "hex"] + [c.lower() for c in ["Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "Black", "White"]], {"default": "random", "description": "Color selection mode for pattern. 'random' uses implicit RGB."}),
-                "pattern_color_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "description": "Hex code for pattern color (used if Pattern Color Mode is 'hex')."}),
-                "alpha": ("INT", {"default": 255, "min": 0, "max": 255, "step": 1, "display": "number", "description": "Alpha (transparency) for pattern (0 is fully transparent, 255 is fully opaque)."}),
-                "shape_position": (["full", "upper_right", "upper_left", "lower_right", "lower_left", "center"], {"default": "full", "description": "Restrict pattern to a specific position/quadrant."},),
-                "blend_mode": (BLEND_MODES, {"default": "normal", "description": "Blending mode to composite the pattern layer onto the base image."}),
-                 "feather_layer": ("BOOLEAN", {"default": False, "label": "Feather Layer", "description": "Apply Gaussian blur to the alpha channel of the pattern layer."}),
-                "feather_sigma_min": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 20.0, "step": 0.1, "display": "number", "description": "Minimum sigma for feathering (if applied)."}),
-                "feather_sigma_max": ("FLOAT", {"default": 6.0, "min": 0.0, "max": 20.0, "step": 0.1, "display": "number", "description": "Maximum sigma for feathering (if applied)."}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "tooltip": "Seed for pattern randomness."}),
+                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "tooltip": "If true, randomize pattern size, colors, position, and blend mode using the seed."}),
+                "num_layers": ("INT", {"default": 1, "min": 1, "max": 10, "step": 1, "display": "number", "tooltip": "Number of pattern layers to add."}),
+                "tile_size": ("INT", {"default": 64, "min": 16, "max": 512, "step": 16, "display": "number", "tooltip": "Size of the repeating pattern tile."}),
+                "pattern_color_mode": (["random", "hex"] + [c.lower() for c in ["Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "Black", "White"]], {"default": "random", "tooltip": "Color selection mode for pattern. 'random' uses implicit RGB."}),
+                "pattern_color_hex": ("STRING", {"default": "", "placeholder": "#RRGGBB", "tooltip": "Hex code for pattern color (used if Pattern Color Mode is 'hex')."}),
+                "alpha": ("INT", {"default": 255, "min": 0, "max": 255, "step": 1, "display": "number", "tooltip": "Alpha (transparency) for pattern (0 is fully transparent, 255 is fully opaque)."}),
+                "shape_position": (["full", "upper_right", "upper_left", "lower_right", "lower_left", "center"], {"default": "full", "tooltip": "Restrict pattern to a specific position/quadrant."},),
+                "blend_mode": (BLEND_MODES, {"default": "normal", "tooltip": "Blending mode to composite the pattern layer onto the base image."}),
+                 "feather_layer": ("BOOLEAN", {"default": False, "label": "Feather Layer", "tooltip": "Apply Gaussian blur to the alpha channel of the pattern layer."}),
+                "feather_sigma_min": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 20.0, "step": 0.1, "display": "number", "tooltip": "Minimum sigma for feathering (if applied)."}),
+                "feather_sigma_max": ("FLOAT", {"default": 6.0, "min": 0.0, "max": 20.0, "step": 0.1, "display": "number", "tooltip": "Maximum sigma for feathering (if applied)."}),
             },
         }
 
