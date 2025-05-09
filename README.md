@@ -4,6 +4,9 @@ A custom node collection for ComfyUI that generates abstract images with compreh
 
 This node collection is designed to create unique abstract base images on the fly within your ComfyUI workflows, which can then be used as input for VAE encoding, image-to-image generation, or other creative processes.
 
+## Workflow
+<img src="examples/workflow.png" alt="Workflow" width="1000"> 
+
 # V2
 
 A custom node pack for ComfyUI, providing modular components to generate abstract images with enhanced user control. This pack was created by splitting functionalities from the original abstract image generator into dedicated nodes for greater flexibility and customization.
@@ -12,12 +15,12 @@ A custom node pack for ComfyUI, providing modular components to generate abstrac
 
 This pack includes the following nodes:
 
-* **Abstract Image Background:** Generate a base solid color or gradient background.
-* **Abstract Image Filled Shapes Layer:** Add a layer of filled shapes (rectangles, ellipses, triangles, polygons).
-* **Abstract Image Lines/Zigzags Layer:** Add a layer of lines and zigzag patterns.
-* **Abstract Image Pattern Layer:** Add a layer of repeating tiled patterns.
-* **Abstract Image Noise Layer:** Add a layer of noise patterns.
-* **Abstract Image Postprocessing:** Apply various post-processing effects to an image.
+* **[Abstract Image Background](#abstract-image-background):** Generate a base solid color or gradient background.
+* **[Abstract Image Filled Shapes Layer](#abstract-image-filled-shapes-layer):** Add a layer of filled shapes (rectangles, ellipses, triangles, polygons).
+* **[Abstract Image Lines/Zigzags Layer](#abstract-image-lineszigzags-layer):** Add a layer of lines and zigzag patterns.
+* **[Abstract Image Pattern Layer](#abstract-image-pattern-layer):** Add a layer of repeating tiled patterns.
+* **[Abstract Image Noise Layer](#abstract-image-noise-layer):** Add a layer of noise patterns.
+* **[Abstract Image Postprocessing](#abstract-image-postprocessing):** Apply various post-processing effects to an image.
 
 
 ## Usage
@@ -30,6 +33,8 @@ These nodes are designed to be chained together in a ComfyUI workflow. A typical
 4.  Connect the output of the Postprocessing node to a "VAE Encode" or other output node.
 
 Each node offers various parameters to control the appearance of the generated elements, including randomization toggles for quick variations based on the seed.
+
+<img src="examples/sample_example.png" alt="Sample Example" width="1000"> 
 
 ## Installation
 
@@ -76,6 +81,8 @@ You should now find the node under the "AbstractImage" category in the add node 
 
 Generates a base image that can be a solid color or a gradient.
 
+<img src="examples/background_example.png" alt="BG Example" width="1000"> 
+
 * **Inputs:**
     * `width`, `height`: Image dimensions.
     * `seed`: Seed for random background generation (especially for gradient direction and randomized colors).
@@ -91,6 +98,8 @@ Generates a base image that can be a solid color or a gradient.
 ### Abstract Image Filled Shapes Layer
 
 Adds a layer of randomized filled shapes to an existing image.
+
+<img src="examples/shape_example.png" alt="Shape Example" width="1000"> 
 
 * **Inputs:**
     * `image`: Input image tensor.
@@ -112,6 +121,8 @@ Adds a layer of randomized filled shapes to an existing image.
 
 Adds a layer of randomized lines and zigzag patterns to an existing image.
 
+<img src="examples/lines_example.png" alt="Lines Example" width="1000"> 
+
 * **Inputs:**
     * `image`: Input image tensor.
     * `seed`: Seed for randomness within this layer.
@@ -132,6 +143,8 @@ Adds a layer of randomized lines and zigzag patterns to an existing image.
 
 Adds a layer of repeating tiled patterns to an existing image.
 
+<img src="examples/pattern_example.png" alt="Pattern Example" width="1000"> 
+
 * **Inputs:**
     * `image`: Input image tensor.
     * `seed`: Seed for randomness within this layer.
@@ -151,6 +164,8 @@ Adds a layer of repeating tiled patterns to an existing image.
 
 Adds a layer of noise patterns to an existing image.
 
+<img src="examples/noise_example.png" alt="Noise Example" width="1000"> 
+
 * **Inputs:**
     * `image`: Input image tensor.
     * `seed`: Seed for randomness within this layer.
@@ -168,6 +183,8 @@ Adds a layer of noise patterns to an existing image.
 ### Abstract Image Postprocessing
 
 Applies various final effects to an image.
+
+<img src="examples/postprocessing_example.png" alt="Postprocessing Example" width="1000"> 
 
 * **Inputs:**
     * `image`: Input image tensor.
