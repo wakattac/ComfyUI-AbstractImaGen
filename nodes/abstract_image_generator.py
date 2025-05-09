@@ -19,33 +19,33 @@ class AbstractImagePostprocessing:
         return {
             "required": {
                 "image": ("IMAGE",), # Input image
-                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "description": "Seed for post-processing randomness."}),
-                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "description": "If true, randomize which effects are applied and their parameters using the seed."}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff, "display": "number", "tooltip": "Seed for post-processing randomness."}),
+                "randomize": ("BOOLEAN", {"default": False, "label": "Enable Randomization", "tooltip": "If true, randomize which effects are applied and their parameters using the seed."}),
 
-                "apply_grain": ("BOOLEAN", {"default": False, "label": "Apply Grain", "description": "Apply photographic grain (noise) to the image."}),
-                "grain_amount": ("FLOAT", {"default": 0.05, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "description": "Amount of grain to apply."}),
-                "grain_amount_random_min": ("FLOAT", {"default": 0.01, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "description": "Minimum grain amount if randomized."}),
-                "grain_amount_random_max": ("FLOAT", {"default": 0.08, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "description": "Maximum grain amount if randomized."}),
-
-
-                "apply_contrast": ("BOOLEAN", {"default": False, "label": "Adjust Contrast", "description": "Adjust the image contrast."}),
-                "contrast_factor": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "description": "Contrast adjustment factor (1.0 is no change)."}),
-                 "contrast_random_min": ("FLOAT", {"default": 0.8, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "description": "Minimum contrast factor if randomized."}),
-                 "contrast_random_max": ("FLOAT", {"default": 1.3, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "description": "Maximum contrast factor if randomized."}),
+                "apply_grain": ("BOOLEAN", {"default": False, "label": "Apply Grain", "tooltip": "Apply photographic grain (noise) to the image."}),
+                "grain_amount": ("FLOAT", {"default": 0.05, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "tooltip": "Amount of grain to apply."}),
+                "grain_amount_random_min": ("FLOAT", {"default": 0.01, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "tooltip": "Minimum grain amount if randomized."}),
+                "grain_amount_random_max": ("FLOAT", {"default": 0.08, "min": 0.0, "max": 1.0, "step": 0.001, "display": "number", "tooltip": "Maximum grain amount if randomized."}),
 
 
-                "apply_brightness": ("BOOLEAN", {"default": False, "label": "Adjust Brightness", "description": "Adjust the image brightness."}),
-                "brightness_amount": ("INT", {"default": 0, "min": -255, "max": 255, "step": 1, "display": "number", "description": "Brightness adjustment amount (-255 is black, 255 is white)."}),
-                 "brightness_random_min": ("INT", {"default": -20, "min": -255, "max": 255, "step": 1, "display": "number", "description": "Minimum brightness amount if randomized."}),
-                 "brightness_random_max": ("INT", {"default": 20, "min": -255, "max": 255, "step": 1, "display": "number", "description": "Maximum brightness amount if randomized."}),
+                "apply_contrast": ("BOOLEAN", {"default": False, "label": "Adjust Contrast", "tooltip": "Adjust the image contrast."}),
+                "contrast_factor": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "tooltip": "Contrast adjustment factor (1.0 is no change)."}),
+                 "contrast_random_min": ("FLOAT", {"default": 0.8, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "tooltip": "Minimum contrast factor if randomized."}),
+                 "contrast_random_max": ("FLOAT", {"default": 1.3, "min": 0.0, "max": 5.0, "step": 0.01, "display": "number", "tooltip": "Maximum contrast factor if randomized."}),
 
 
-                "apply_grayscale": ("BOOLEAN", {"default": False, "label": "Apply Grayscale", "description": "Convert the image to grayscale."}),
+                "apply_brightness": ("BOOLEAN", {"default": False, "label": "Adjust Brightness", "tooltip": "Adjust the image brightness."}),
+                "brightness_amount": ("INT", {"default": 0, "min": -255, "max": 255, "step": 1, "display": "number", "tooltip": "Brightness adjustment amount (-255 is black, 255 is white)."}),
+                 "brightness_random_min": ("INT", {"default": -20, "min": -255, "max": 255, "step": 1, "display": "number", "tooltip": "Minimum brightness amount if randomized."}),
+                 "brightness_random_max": ("INT", {"default": 20, "min": -255, "max": 255, "step": 1, "display": "number", "tooltip": "Maximum brightness amount if randomized."}),
 
-                "apply_blur": ("BOOLEAN", {"default": False, "label": "Apply Blur", "description": "Apply Gaussian blur to the image."}),
-                "blur_sigma": ("FLOAT", {"default": 0.8, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "description": "Sigma for Gaussian blur."}),
-                 "blur_sigma_random_min": ("FLOAT", {"default": 0.4, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "description": "Minimum blur sigma if randomized."}),
-                 "blur_sigma_random_max": ("FLOAT", {"default": 1.2, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "description": "Maximum blur sigma if randomized."}),
+
+                "apply_grayscale": ("BOOLEAN", {"default": False, "label": "Apply Grayscale", "tooltip": "Convert the image to grayscale."}),
+
+                "apply_blur": ("BOOLEAN", {"default": False, "label": "Apply Blur", "tooltip": "Apply Gaussian blur to the image."}),
+                "blur_sigma": ("FLOAT", {"default": 0.8, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "tooltip": "Sigma for Gaussian blur."}),
+                 "blur_sigma_random_min": ("FLOAT", {"default": 0.4, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "tooltip": "Minimum blur sigma if randomized."}),
+                 "blur_sigma_random_max": ("FLOAT", {"default": 1.2, "min": 0.0, "max": 10.0, "step": 0.01, "display": "number", "tooltip": "Maximum blur sigma if randomized."}),
             },
         }
 
