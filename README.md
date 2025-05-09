@@ -5,6 +5,9 @@ A custom node collection for ComfyUI that generates abstract images with compreh
 This node collection is designed to create unique abstract base images on the fly within your ComfyUI workflows, which can then be used as input for VAE encoding, image-to-image generation, or other creative processes.
 
 ## Workflow
+
+This image can be loaded into ComfyUI as a workflow
+
 <img src="examples/workflow.png" alt="Workflow" width="1000"> 
 
 # V2
